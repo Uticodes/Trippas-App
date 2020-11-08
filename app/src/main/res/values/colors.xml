@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3E64FF</color>
+    <color name="colorPrimaryDark">#3E64FF</color>
+    <color name="colorAccent">#3E64FF</color>
+    <color name="colorWhite">#FFFFFF</color>
+    <color name="colorGreyText">#A5A2A2</color>
+    <color name="colorGreyIcon">#A6A7AB</color>
+    <color name="colorGreyDivider">#9AA5A2A2</color>
+
+
+
+    <color name="business">#3E64FF</color>
+    <color name="vacation">#FFC93E</color>
+    <color name="medical">#FF3E6C</color>
+    <color name="education">#3EBAFF</color>
+
+</resources>
