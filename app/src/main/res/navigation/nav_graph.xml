@@ -27,7 +27,8 @@
         <argument
             android:name="tripInfo"
             app:argType="com.geofferyj.trippas.models.Trip"
-            app:nullable="true" />
+            app:nullable="true"
+            android:defaultValue="@null" />
     </fragment>
     <fragment
         android:id="@+id/splashFragment"

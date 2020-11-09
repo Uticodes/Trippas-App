@@ -34,7 +34,7 @@ class TripListFragment : Fragment(R.layout.fragment_trip_list), RVAdapter.OnItem
             rv_trips.adapter = adapter
 
 
-            trip_count.text = "${it.size.toString()} Trips"
+            trip_count.text = if (it.size == 1) "${it.size.toString()} Trip" else "${it.size.toString()} Trips"
 
         })
 

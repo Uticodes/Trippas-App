@@ -2,8 +2,10 @@ package com.geofferyj.trippas.views.fragments
 
 import android.app.DatePickerDialog
 import android.app.TimePickerDialog
+import android.os.Build
 import android.os.Bundle
 import android.text.Editable
+import android.util.Log
 import android.view.Gravity
 import android.view.View
 import android.widget.Button
@@ -19,6 +21,10 @@ import com.geofferyj.trippas.R
 import com.geofferyj.trippas.models.Trip
 import com.geofferyj.trippas.viewmodels.TripViewModel
 import kotlinx.android.synthetic.main.fragment_add_trip.*
+import java.text.SimpleDateFormat
+import java.time.LocalDate
+import java.time.LocalTime
+import java.time.format.DateTimeFormatter
 import java.util.*
 
 
@@ -65,6 +71,13 @@ class AddTripFragment : Fragment(R.layout.fragment_add_trip) {
             }
         }
 
+        departure.setOnFocusChangeListener { v, hasFocus ->
+            setTitleCase(v, hasFocus)
+        }
+
+        destination.setOnFocusChangeListener { v, hasFocus ->
+            setTitleCase(v, hasFocus)
+        }
 
         departure_date.setOnClickListener {
             selectDate(it)
@@ -95,8 +108,9 @@ class AddTripFragment : Fragment(R.layout.fragment_add_trip) {
         DatePickerDialog(
             requireContext(),
             DatePickerDialog.OnDateSetListener { _, mYear, mMonth, dayOfMonth ->
+                val formattedDate = formatDate(mYear, mMonth, dayOfMonth)
 
-                (v as EditText).text = "${mMonth + 1}, $dayOfMonth $mYear".toEditable()
+                (v as EditText).text = formattedDate.toEditable()
             },
             year,
             month,
@@ -197,4 +211,34 @@ class AddTripFragment : Fragment(R.layout.fragment_add_trip) {
 
     private fun String.toEditable(): Editable = Editable.Factory.getInstance().newEditable(this)
 
+    private fun formatDate(year: Int, month: Int, day: Int): String {
+
+        return if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            val date = LocalDate.of(year, month, day)
+            val formatter = DateTimeFormatter.ofPattern("EEE, dd MMM yyyy")
+            val answer: String = date.format(formatter)
+            Log.d("answer", answer)
+            answer
+        } else {
+
+            var date = Date(year - 1900, month, day)
+            val formatter = SimpleDateFormat("EEE, dd MMM yyyy", Locale.getDefault())
+            val answer: String = formatter.format(date)
+            Log.d("answer", answer)
+            Log.d("answerYear", year.toString())
+            answer
+
+        }
+    }
+
+    fun String.capitalizeWords(): String =
+        split(" ").joinToString(" ") { it.toLowerCase().capitalize() }
+
+
+    private fun setTitleCase(v: View, hasFocus: Boolean) {
+        val editText = v as EditText
+        if (!hasFocus) {
+            editText.text =  editText.text.toString().capitalizeWords().toEditable()
+        }
+    }
 }
