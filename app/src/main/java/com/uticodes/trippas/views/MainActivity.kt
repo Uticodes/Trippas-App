@@ -1,9 +1,9 @@
-package com.geofferyj.trippas.views
+package com.uticodes.trippas.views
 
 import android.os.Bundle
 import android.view.WindowManager
 import androidx.appcompat.app.AppCompatActivity
-import com.geofferyj.trippas.R
+import com.uticodes.trippas.R
 
 class MainActivity : AppCompatActivity() {
 

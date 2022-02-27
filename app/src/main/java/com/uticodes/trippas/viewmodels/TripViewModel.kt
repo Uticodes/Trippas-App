@@ -1,12 +1,12 @@
-package com.geofferyj.trippas.viewmodels
+package com.uticodes.trippas.viewmodels
 
 import android.app.Application
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.viewModelScope
-import com.geofferyj.trippas.models.Trip
-import com.geofferyj.trippas.models.database.TripDB
-import com.geofferyj.trippas.models.database.TripRepository
+import com.uticodes.trippas.models.Trip
+import com.uticodes.trippas.models.database.TripDB
+import com.uticodes.trippas.models.database.TripRepository
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 

@@ -1,10 +1,10 @@
-package com.geofferyj.trippas.models.database
+package com.uticodes.trippas.models.database
 
 import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
-import com.geofferyj.trippas.models.Trip
+import com.uticodes.trippas.models.Trip
 
 
 @Database(entities = [Trip::class], version = 1, exportSchema = false)

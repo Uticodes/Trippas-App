@@ -1,4 +1,4 @@
-package com.geofferyj.trippas.views.adapters
+package com.uticodes.trippas.views.adapters
 
 
 import android.view.LayoutInflater
@@ -8,8 +8,8 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
-import com.geofferyj.trippas.R
-import com.geofferyj.trippas.models.Trip
+import com.uticodes.trippas.R
+import com.uticodes.trippas.models.Trip
 
 
 class RVAdapter(private val trips: List<Trip>, private val listener: OnItemClickListener) : RecyclerView.Adapter<RVAdapter.RVViewHolder>() {

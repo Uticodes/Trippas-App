@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/ListFragment"
-        android:name="com.geofferyj.trippas.views.fragments.TripListFragment"
+        android:name="com.uticodes.trippas.views.fragments.TripListFragment"
         android:label="TripListFragment"
         tools:layout="@layout/fragment_trip_list">
         <action
@@ -16,7 +16,7 @@
     </fragment>
     <fragment
         android:id="@+id/AddTripFragment"
-        android:name="com.geofferyj.trippas.views.fragments.AddTripFragment"
+        android:name="com.uticodes.trippas.views.fragments.AddTripFragment"
         android:label="AddTripFragment"
         tools:layout="@layout/fragment_add_trip">
         <action
@@ -26,13 +26,13 @@
             app:popUpToInclusive="true" />
         <argument
             android:name="tripInfo"
-            app:argType="com.geofferyj.trippas.models.Trip"
+            app:argType="com.uticodes.trippas.models.Trip"
             app:nullable="true"
             android:defaultValue="@null" />
     </fragment>
     <fragment
         android:id="@+id/splashFragment"
-        android:name="com.geofferyj.trippas.views.fragments.SplashFragment"
+        android:name="com.uticodes.trippas.views.fragments.SplashFragment"
         android:label="fragment_splash"
         tools:layout="@layout/fragment_splash" >
         <action

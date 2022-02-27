@@ -1,4 +1,4 @@
-package com.geofferyj.trippas.views.fragments
+package com.uticodes.trippas.views.fragments
 
 import android.os.Bundle
 import android.view.View
@@ -8,11 +8,10 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.findNavController
 import androidx.navigation.fragment.findNavController
-import com.geofferyj.trippas.R
-import com.geofferyj.trippas.views.adapters.RVAdapter
-import com.geofferyj.trippas.models.Trip
-import com.geofferyj.trippas.views.fragments.TripListFragmentDirections
-import com.geofferyj.trippas.viewmodels.TripViewModel
+import com.uticodes.trippas.R
+import com.uticodes.trippas.views.adapters.RVAdapter
+import com.uticodes.trippas.models.Trip
+import com.uticodes.trippas.viewmodels.TripViewModel
 import kotlinx.android.synthetic.main.fragment_trip_list.*
 
 class TripListFragment : Fragment(R.layout.fragment_trip_list), RVAdapter.OnItemClickListener {

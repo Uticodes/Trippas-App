@@ -1,4 +1,4 @@
-package com.geofferyj.trippas.models
+package com.uticodes.trippas.models
 
 import android.os.Parcelable
 import androidx.room.Entity

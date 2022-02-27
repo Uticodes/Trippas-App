@@ -1,7 +1,7 @@
-package com.geofferyj.trippas.models.database
+package com.uticodes.trippas.models.database
 
 import androidx.lifecycle.LiveData
-import com.geofferyj.trippas.models.Trip
+import com.uticodes.trippas.models.Trip
 
 class TripRepository(private val tripDAO: TripDAO) {
 

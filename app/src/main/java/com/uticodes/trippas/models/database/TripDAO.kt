@@ -1,8 +1,8 @@
-package com.geofferyj.trippas.models.database
+package com.uticodes.trippas.models.database
 
 import androidx.lifecycle.LiveData
 import androidx.room.*
-import com.geofferyj.trippas.models.Trip
+import com.uticodes.trippas.models.Trip
 
 @Dao
 interface TripDAO {

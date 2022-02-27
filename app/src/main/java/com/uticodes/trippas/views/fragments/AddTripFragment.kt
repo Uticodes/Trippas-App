@@ -1,4 +1,4 @@
-package com.geofferyj.trippas.views.fragments
+package com.uticodes.trippas.views.fragments
 
 import android.app.DatePickerDialog
 import android.app.TimePickerDialog
@@ -17,9 +17,9 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.findNavController
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
-import com.geofferyj.trippas.R
-import com.geofferyj.trippas.models.Trip
-import com.geofferyj.trippas.viewmodels.TripViewModel
+import com.uticodes.trippas.R
+import com.uticodes.trippas.models.Trip
+import com.uticodes.trippas.viewmodels.TripViewModel
 import kotlinx.android.synthetic.main.fragment_add_trip.*
 import java.text.SimpleDateFormat
 import java.time.LocalDate
@@ -186,7 +186,7 @@ class AddTripFragment : Fragment(R.layout.fragment_add_trip) {
 
         val popupMenu = PopupMenu(view.context, view)
         popupMenu.inflate(R.menu.add_trip_menu)
-        popupMenu.gravity = Gravity.CENTER
+        popupMenu.gravity = Gravity.LEFT
 
         popupMenu.show()
 

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".views.fragments.TripListFragment">
+    tools:context="com.uticodes.trippas.views.fragments.TripListFragment">
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fab"
@@ -51,7 +51,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="32dp"
-        android:text="Hello, Joe"
+        android:text="Hello, Utibe"
         android:textAllCaps="false"
         android:textSize="18sp"
         android:textStyle="bold"
